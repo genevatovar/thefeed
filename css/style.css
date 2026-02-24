@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Minoel';
-  src: url('../fonts/minoel.otf') format('opentype'),
-       url('../fonts/minoel.ttf') format('truetype');
+  src: url('../fonts/Minoel.otf') format('opentype'),
+       url('../fonts/Minoel.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
