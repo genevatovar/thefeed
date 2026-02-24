@@ -1,0 +1,270 @@
+/* ----------------------------------------
+  BASE
+------------------------------------------- */
+
+body {
+  margin: 0;
+  padding: 50px;
+  box-sizing: border-box;
+}
+
+/* ----------------------------------------
+  CUSTOM FONT
+------------------------------------------- */
+
+@font-face {
+  font-family: 'Minoel';
+  src: url('../../fonts/minoel.otf') format('opentype'),
+       url('../../fonts/minoel.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.minoel-text {
+  font-family: 'Minoel', cursive;
+  font-weight: normal;
+  line-height: 1.3;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* ----------------------------------------
+  LAYOUT
+------------------------------------------- */
+
+.layout {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.left-side {
+  flex: 0 0 400px;
+  min-width: 0;
+  box-sizing: border-box;
+}
+
+.right-side {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 0;
+}
+/* 
+.layout {
+  display: flex;
+  align-items: flex-start;
+  width: 100%;
+  position: relative;
+  min-height: 100vh;
+}
+
+.left-side {
+  flex: 0 0 400px;
+  min-width: 0;
+  box-sizing: border-box;
+  z-index: 2;
+  position: relative;
+}
+
+.right-side {
+  position: absolute;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 600px;
+  z-index: 1;
+} */
+
+
+/* ----------------------------------------
+  LEFT SIDE
+------------------------------------------- */
+
+nav a {
+  font-size: 85px;
+  color: #de4a4a;
+  margin: 10px 0 30px 0;
+  text-decoration: none;
+  display: block;
+  white-space: normal;
+  transition: transform 0.2s ease;
+}
+
+nav a:hover {
+  transform: translateY(-5px) scale(1.1);
+}
+
+.friend-box {
+  width: 100%;
+  margin: 0;
+  padding: 20px 30px 50px 50px;
+  border: 4px solid black;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.friend-box h2 {
+  font-size: 40px;
+  text-align: center;
+}
+
+.friend-box a {
+  font-size: 25px;
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.friend-box .h1 {
+  border: none;
+  width: 90%;
+  border-top: 2px solid black;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.friend-box #hr2 {
+  border: none;
+  border-top: 3px solid black;
+  margin: 15px -30px 0 -50px;
+  width: calc(100% + 80px);
+  display: block;
+}
+
+
+/* This is going to be an image of me and a description */
+.friend-box img {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%
+}
+
+.friend-box p {
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 15px;
+  text-align: left;
+  margin-top: 10px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 50px;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/denim-heart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+/* ----------------------------------------
+  RIGHT SIDE
+------------------------------------------- */
+
+.music-container,
+.video-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 0 20px 0;
+  padding: 20px;
+  border: 5px solid black;
+  border-radius: 8px;
+  box-sizing: border-box;
+}
+
+.music-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.music-container h3,
+.video-container h3 {
+  font-size: 30px;
+  color: #5865a8;
+  text-align: center;
+}
+
+.music-container audio {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.music-container p,
+.video-container p {
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+  margin-top: 10px;
+}
+
+.video-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.video-container video {
+  width: 60%;
+  height: auto;
+  display: block;
+}
+
+/* ----------------------------------------
+  RESPONSIVE
+------------------------------------------- */
+
+@media (max-width: 1000px) {
+  body {
+    padding: 20px;
+  }
+
+  .layout {
+    flex-direction: column;
+    position: static;
+    min-height: unset;
+  }
+
+  .left-side {
+    flex: none;
+    width: 100%;
+    max-width: 600px;
+    margin-bottom: 20px;
+  }
+
+  .right-side {
+    position: static;
+    transform: none;
+    width: 100%;
+    max-width: 600px;
+  }
+
+  nav a {
+    margin-top: 0;
+  }
+}
