@@ -1,3 +1,11 @@
+:root {
+  --black: #1a1a1a;
+}
+
+/* ----------------------------------------
+  CUSTOM FONT
+------------------------------------------- */
+
 @font-face {
   font-family: 'Minoel';
   src: url('../fonts/Minoel.otf') format('opentype'),
@@ -10,21 +18,103 @@
   font-family: 'Minoel', cursive;
   font-weight: normal;
   line-height: 1.3;
-  color: #5865a8;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
 }
 
 /* ----------------------------------------
-Scattered Images
+  BASE
 ------------------------------------------- */
+
 body {
   position: relative;
   min-height: 100vh;
 }
 
-.scattered-img {
+/* ----------------------------------------
+  HEADER
+------------------------------------------- */
+
+h1 {
+  text-align: center;
+  font-size: 80px;
+  color: #363135;
+}
+
+/* ----------------------------------------
+  GIF NAV
+------------------------------------------- */
+
+.gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.gif img {
+  width: 500px;
+  height: auto;
+}
+
+/* ----------------------------------------
+  SECTION
+------------------------------------------- */
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  text-align: left;
+  gap: 2px;
+  padding-left: 60px;
+  position: absolute;
+  bottom: 60px;
+  left: 0;
+}
+
+section h2 {
+  color: #F24957;
+  margin: 0;
+  font-size: 75px;
+}
+
+section p {
+  font-family: "Pangolin", cursive;
+  font-weight: 100;
+  font-style: normal;
+  font-size: 24px;
+  text-align: left;
+  margin: 2;
+}
+
+/* ----------------------------------------
+  FEED BUTTON
+------------------------------------------- */
+
+.feed-btn {
+  display: inline-block;
+  padding: 12px 28px;
+  background: #F24957;
+  color: white;
+  text-decoration: none;
+  border-radius: 100px;
+  border: 2.5px solid var(--black);
+  box-shadow: 3px 3px 0 var(--black);
+  transition: transform 0.2s, box-shadow 0.2s;
+  font-family: "Pangolin", cursive;
+}
+
+.feed-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 5px 5px 0 var(--black);
+}
+
+/* ----------------------------------------
+  SCATTERED IMAGES (saved for later)
+------------------------------------------- */
+
+/* .scattered-img {
   position: absolute;
   width: 160px;
   z-index: 0;
@@ -39,36 +129,36 @@ body {
 .scattered-img:hover {
   transform: rotate(0deg) scale(1.08) !important;
   z-index: 10;
-}
-
-nav {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.minoel-text img {
-  display: block;
-  width: 400px; /* adjust to whatever size looks good */
-  height: auto;
-}
+} */
 
 /* ----------------------------------------
-Header
+  RESPONSIVE
 ------------------------------------------- */
-h1 {
-  text-align: center;
-  font-size: 80px;
-}
 
-.img-container {
-  width: 100%;
-  max-width: 400px;
-  margin: 0 auto 20px;
-}
+@media (max-width: 768px) {
+  body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
 
-.img-container img {
-  width: 100%;
-  height: auto;
-  display: block;
+  h1 {
+    font-size: 48px;
+  }
+
+  .gif img {
+    width: 250px;
+  }
+
+  section {
+    position: static;
+    align-items: center;
+    text-align: center;
+    padding-left: 0;
+  }
+
+  section p {
+    text-align: center;
+  }
 }

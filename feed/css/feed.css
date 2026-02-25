@@ -6,6 +6,7 @@ body {
   margin: 0;
   padding: 50px;
   box-sizing: border-box;
+  /* background-color:#0B4FD9; */
 }
 
 /* ----------------------------------------
@@ -130,7 +131,7 @@ nav a:hover {
   display: block;
 }
 
-.friend-box #hr2 {
+.friend-box #hr {
   border: none;
   border-top: 3px solid black;
   margin: 15px -30px 0 -50px;
@@ -204,7 +205,8 @@ li::before {
 .music-container h3,
 .video-container h3 {
   font-size: 30px;
-  color: #5865a8;
+  /* color: #5865a8; */
+  color: #0B4FD9;
   text-align: center;
 }
 
