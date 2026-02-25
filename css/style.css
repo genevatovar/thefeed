@@ -29,7 +29,8 @@
 
 body {
   position: relative;
-  min-height: 100vh;
+  height: 100vh;
+  overflow: hidden;
 }
 
 /* ----------------------------------------
@@ -40,20 +41,36 @@ h1 {
   text-align: center;
   font-size: 80px;
   color: #363135;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
 }
 
 /* ----------------------------------------
   GIF NAV
 ------------------------------------------- */
 
-.gif {
+/* .gif {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .gif img {
-  width: 500px;
+  width: 700px;
+  height: auto;
+} */
+
+
+.gif {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -80px;
+}
+
+.gif img {
+  width: 800px;
   height: auto;
 }
 
