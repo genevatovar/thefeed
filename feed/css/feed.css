@@ -6,7 +6,6 @@ body {
   margin: 0;
   padding: 50px;
   box-sizing: border-box;
-  /* background-color:#0B4FD9; */
 }
 
 /* ----------------------------------------
@@ -39,12 +38,14 @@ body {
   flex-direction: row;
   align-items: flex-start;
   width: 100%;
+  min-height: 100vh;
 }
 
 .left-side {
   flex: 0 0 400px;
   min-width: 0;
   box-sizing: border-box;
+  align-self: flex-start;
 }
 
 .right-side {
@@ -54,34 +55,6 @@ body {
   align-items: center;
   min-width: 0;
 }
-/* 
-.layout {
-  display: flex;
-  align-items: flex-start;
-  width: 100%;
-  position: relative;
-  min-height: 100vh;
-}
-
-.left-side {
-  flex: 0 0 400px;
-  min-width: 0;
-  box-sizing: border-box;
-  z-index: 2;
-  position: relative;
-}
-
-.right-side {
-  position: absolute;
-  left: 0;
-  right: 0;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 600px;
-  z-index: 1;
-} */
 
 
 /* ----------------------------------------
@@ -96,89 +69,44 @@ nav a {
   display: block;
   white-space: normal;
   transition: transform 0.2s ease;
+  animation: fadeIn 0.2s ease-in 0.2s both;
 }
 
 nav a:hover {
   transform: translateY(-5px) scale(1.1);
 }
 
-.friend-box {
+.bio-box {
+  position: sticky;
+  top: 50px;
   width: 100%;
   margin: 0;
   padding: 20px 30px 50px 50px;
-  border: 4px solid black;
+  border: 2px solid black;
   border-radius: 10px;
   box-sizing: border-box;
+  animation: fadeIn 0.6s ease-in 0.3s both;
 }
 
-.friend-box h2 {
-  font-size: 40px;
+.bio-box h2 {
+  font-size: 30px;
   text-align: center;
 }
 
-.friend-box a {
-  font-size: 25px;
-  font-family: "Pangolin", cursive;
-  font-weight: 400;
-  font-style: normal;
-}
-
-.friend-box .h1 {
-  border: none;
-  width: 90%;
-  border-top: 2px solid black;
-  padding-bottom: 20px;
-  display: block;
-}
-
-.friend-box #hr {
-  border: none;
-  border-top: 3px solid black;
-  margin: 15px -30px 0 -50px;
-  width: calc(100% + 80px);
-  display: block;
-}
-
-
-/* This is going to be an image of me and a description */
-.friend-box img {
+.bio-box img {
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%
 }
 
-.friend-box p {
+.bio-box p {
   font-family: "Pangolin", cursive;
   font-weight: 400;
   font-style: normal;
   font-size: 15px;
   text-align: left;
   margin-top: 10px;
-}
-
-ul {
-  list-style: none;
-  padding-left: 0;
-}
-
-li {
-  position: relative;
-  padding-left: 50px;
-}
-
-li::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 30px;
-  height: 30px;
-  background-image: url('../img/denim-heart.png');
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
 }
 
 /* ----------------------------------------
@@ -191,7 +119,7 @@ li::before {
   max-width: 600px;
   margin: 0 0 20px 0;
   padding: 20px;
-  border: 5px solid black;
+  border: 3px solid black;
   border-radius: 8px;
   box-sizing: border-box;
 }
@@ -200,6 +128,7 @@ li::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.6s ease-in 0.4s both;
 }
 
 .music-container h3,
@@ -229,6 +158,7 @@ li::before {
   display: flex;
   flex-direction: column;
   align-items: center;
+  animation: fadeIn 0.6s ease-in 0.5s both;
 }
 
 .video-container video {
@@ -270,3 +200,56 @@ li::before {
     margin-top: 0;
   }
 }
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+} 
+
+
+/* .friend-box a {
+  font-size: 25px;
+  font-family: "Pangolin", cursive;
+  font-weight: 400;
+  font-style: normal;
+} */
+
+/* .friend-box .h1 {
+  border: none;
+  width: 90%;
+  border-top: 2px solid black;
+  padding-bottom: 20px;
+  display: block;
+}
+
+.friend-box #hr {
+  border: none;
+  border-top: 2px solid black;
+  margin: 15px -30px 0 -50px;
+  width: calc(100% + 80px);
+  display: block;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+li {
+  position: relative;
+  padding-left: 50px;
+}
+
+li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 30px;
+  height: 30px;
+  background-image: url('../img/denim-heart.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+} */
