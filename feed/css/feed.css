@@ -58,8 +58,10 @@ body {
   flex-direction: column;
   align-items: center;
   min-width: 0;
+  padding-bottom: 20px;
+  padding-right: 400px;
+  padding-left: 100px; /* adds breathing room from the left side */
 }
-
 
 /* ----------------------------------------
   LEFT SIDE
@@ -207,15 +209,15 @@ nav a:hover {
 
 .corner-gif {
   position: fixed;
-  bottom: 10px;
-  right: 50px;
+  bottom: 0px;
+  right: 0px;  /* pin it to the far right edge */
   z-index: 999;
   transition: transform 0.2s ease;
   animation: fadeIn 0.6s ease-in 0.8s both;
 }
 
 .corner-gif img {
-  width: 280px;
+  width: 380px;
   height: auto;
   display: block;
   animation: float 3s ease-in-out infinite;
@@ -251,10 +253,9 @@ nav a:hover {
   }
 
   .right-side {
-    position: static;
-    transform: none;
-    width: 100%;
-    max-width: 600px;
+    padding-right: 0;
+    padding-left: 0;
+    padding-bottom: 200px;
   }
 
   nav a {
@@ -267,7 +268,7 @@ nav a:hover {
   }
 
   .corner-gif img {
-    width: 120px;  /* shrink the gif on small screens */
+    width: 160px;
   }
 }
 

@@ -30,8 +30,6 @@
 
 body {
   position: relative;
-  height: 100vh;
-  overflow: hidden;
   background-color: #F4F3F0;
 }
 
@@ -78,8 +76,8 @@ h1 {
 }
 
 .gif img {
-  width: clamp(300px, 50vw, 800px); /* FIX 3: scales with screen size */
-  height: auto;
+  width: clamp(200px, 40vw, 800px);
+  height: auto; /* lets the image scale naturally without distortion */
   animation: float 3s ease-in-out infinite;
 }
 
