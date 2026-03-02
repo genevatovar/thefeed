@@ -48,6 +48,7 @@ h1 {
   line-height: 1;
   text-align: center;
   margin: 0;
+  margin-top: 50px;
   padding: 0;
   background: linear-gradient(90deg, #363135 40%, #a07080 50%, #363135 60%);
   background-size: 200% auto;
