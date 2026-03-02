@@ -11,142 +11,166 @@
 <body>
   <div class="layout">
 
-    <!-- LEFT SIDE -->
-    <div class="left-side">
+    <!-- =====================
+         LEFT SIDEBAR (sticky bio)
+         ===================== -->
+    <aside class="left-side">
+      <a href="../index.html" class="corner-gif">
+        <img src="img/animated2.gif" alt="Back to home">
+      </a>
       <div class="bio-box">
         <h2 class="minoel-text">Hi, I'm <span class="name">Geneva</span> — CS + UX/UI Student.</h2>
-
-        <img src="img/me.jpg" alt="">
-        <p><br>I'm a Computer Science and UX/UI student at the University of San Francisco with a passion for creative,
+        <img src="img/me.jpg" alt="Photo of Geneva">
+        <p>
+          I'm a Computer Science and UX/UI student at the University of San Francisco with a passion for creative,
           human-centered design.
           <br><br>
-          This site is a window into how I actually live digitally (the apps I rely on, the ones I love, and
-          the ones I probably spend too much time on).
+          This site is a window into how I actually live digitally — the apps I rely on, the ones I love, and
+          the ones I probably spend too much time on.
         </p>
       </div>
-    </div>
+    </aside>
 
-    <!-- RIGHT SIDE -->
-    <div class="right-side">
+    <!-- =====================
+         RIGHT SIDE (feed)
+         ===================== -->
+    <main class="right-side">
 
-      <!-- Feed Box -->
+      <!-- Feed Header -->
       <div class="feed-box">
         <h2 class="minoel-text">The Feed</h2>
         <p>Welcome to The Feed, a place that captures my digital life. 📸</p>
       </div>
 
-      <!-- Video Containers -->
+      <!-- App: Clock -->
       <div class="video-container">
         <video src="video/clock.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Clock</b></h3>
+        <h3 class="minoel-text">Clock</h3>
         <p>I use this to get up in the morning. I have a few set earlier than I need to wake up because I like to click snooze over and over. After a few snoozes, I finally get up!</p>
-        <br>
       </div>
+
+      <!-- App: Apple Music -->
       <div class="video-container">
         <video src="video/music.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Apple Music</b></h3>
-        <p>I loveeeee listening to music. I pretty much always have a pair of headphones on whether it be my Sony WH-1000XM5s or my Airpods. My go-to lately has been shuffling my favorites or using my Winter 2025 playlist.</p>
-        <br>
+        <h3 class="minoel-text">Apple Music</h3>
+        <p>I loveeeee listening to music. I pretty much always have a pair of headphones on — whether it be my Sony WH-1000XM5s or my AirPods. My go-to lately has been shuffling my favorites or using my Winter 2025 playlist.</p>
       </div>
+
+      <!-- App: Apple Podcasts -->
       <div class="video-container">
         <video src="video/podcast.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Apple Podcasts</b></h3>
-        <p>I enjoy doing mundane tasks while listening to podcasts! In the morning I like to put on a podcast and reach the flow state while getting ready. I have also been loving the Ride podcast. Mary Beth Barone and Benito Skinner are soooo funny.</p>
-        <br>
+        <h3 class="minoel-text">Apple Podcasts</h3>
+        <p>I enjoy doing mundane tasks while listening to podcasts! In the morning I like to put one on while getting ready. I've also been loving the Ride podcast — Mary Beth Barone and Benito Skinner are soooo funny.</p>
       </div>
-      <div class="video-container">
+
+      <!-- App: Pinterest (with scroll-triggered doodle) -->
+      <div class="video-container doodle-anchor">
+        <img class="doodle-float" src="img/changing-doodle.png" alt="Decorative doodle">
         <video src="video/pinterest.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Pinterest</b></h3>
-        <p>Anytime I am struggling creatively, I use Pinterest. I like using it for picking out an outfit, finding new recipes, drawings etc. It helps me find the things I like through an algorithm catered to my taste and preferences!</p>
-        <br>
+        <h3 class="minoel-text">Pinterest</h3>
+        <p>Anytime I'm struggling creatively, I use Pinterest. I like using it for outfit ideas, new recipes, drawings, and more. It helps me discover things I love through an algorithm catered to my taste!</p>
       </div>
+
+      <!-- App: Camera -->
       <div class="video-container">
         <video src="video/camera.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Camera</b></h3>
+        <h3 class="minoel-text">Camera</h3>
         <p>I love taking photos to capture moments or important info! Here I am taking a photo of my roommate's dog Appa. He is really cute.</p>
-        <br>
       </div>
+
+      <!-- App: Facebook Marketplace -->
       <div class="video-container">
         <video src="video/facebook.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Facebook Marketplace</b></h3>
-        <p>Facebook marketplace is one of my favorite apps to scroll and look for new things to buy. Not only is it cost effective and good for the environment, but I can also easily doomscroll and see all of the cool, niche items people in San Francisco/Bay Area are selling!</p>
-        <br>
+        <h3 class="minoel-text">Facebook Marketplace</h3>
+        <p>Facebook Marketplace is one of my favorite apps to scroll through for new finds. It's cost-effective, good for the environment, and full of cool, niche items people around the Bay Area are selling!</p>
       </div>
+
+      <!-- App: Notion -->
       <div class="video-container">
         <video src="video/notion.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Notion</b></h3>
-        <p>Notion is my favorite everyday app used for organizing and managing my tasks. I use it to plan out my week and help me manage my time and various responsibilities.</p>
-        <br>
+        <h3 class="minoel-text">Notion</h3>
+        <p>Notion is my favorite everyday app for organizing and managing tasks. I use it to plan out my week and manage my various responsibilities.</p>
       </div>
+
+      <!-- App: Instagram -->
       <div class="video-container">
         <video src="video/instagram.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Instagram</b></h3>
-        <p>I enjoy doom scrolling on Instagram. It is my main social media platform (I try to keep it to a minimum lol). I use it to send funny reels to my friends and boyfriend + I enjoy seeing what people are up to, even that one friend from middle school who I still follow!</p>
-        <br>
+        <h3 class="minoel-text">Instagram</h3>
+        <p>I enjoy doom scrolling on Instagram — it's my main social media platform (I try to keep it to a minimum lol). I use it to send funny reels to friends and my boyfriend, and I love seeing what people are up to, even that one friend from middle school I still follow!</p>
       </div>
+
+      <!-- App: Photo Album -->
       <div class="video-container">
         <video src="video/photos.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Photo Album</b></h3>
-        <p>I like to scroll through this and go through my memories and reminisce. I'm constantly nostalgic, even for yesterday. Here are some photos of my favorite memories that I hand picked from my favorites album on my phone.</p>
-        <br>
+        <h3 class="minoel-text">Photo Album</h3>
+        <p>I like to scroll through this and go through my memories and reminisce. I'm constantly nostalgic, even for yesterday. Here are some hand-picked favorites from my phone.</p>
       </div>
+
+      <!-- App: Opal -->
       <div class="video-container">
         <video src="video/opal.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Opal</b></h3>
-        <p>As someone who is glued to their phone 24/7 I enjoy using Opal. It blocks my most distracting and least productive apps and when I need to use those apps, I have to set a timer to be able to access it. (I was on track to spend 33 years on my phone, how sad).</p>
-        <br>
+        <h3 class="minoel-text">Opal</h3>
+        <p>As someone who is glued to their phone 24/7, I enjoy using Opal. It blocks my most distracting apps, and when I need access, I have to set a timer first. (I was on track to spend 33 years on my phone — how sad.)</p>
       </div>
+
+      <!-- App: Gmail -->
       <div class="video-container">
         <video src="video/gmail.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Gmail</b></h3>
-        <p>I unfortunately use Gmail a lot. I have to constantly check my email and make sure I've answered all direct emails and I'm up to date with important info! 🙈</p>
-        <br>
+        <h3 class="minoel-text">Gmail</h3>
+        <p>I unfortunately use Gmail a lot. I constantly check my email to make sure I've answered direct messages and I'm up to date with important info! 🙈</p>
       </div>
+
+      <!-- App: Transit -->
       <div class="video-container">
         <video src="video/transit.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Transit</b></h3>
-        <p>I have been using the Transit app quite a lot, especially since one of my classmates told me that Transit Royale is free for students! It shows me live updates on all buses including how packed the bus is, if there are any delays, how clean it is, etc.</p>
-        <br>
+        <h3 class="minoel-text">Transit</h3>
+        <p>I've been using Transit a lot lately — especially since a classmate told me Transit Royale is free for students! It shows live bus updates including how packed the bus is, delays, cleanliness, and more.</p>
       </div>
+
+      <!-- App: Yelp -->
       <div class="video-container">
         <video src="video/yelp.mp4.mov" autoplay loop muted playsinline></video>
-        <h3 class="minoel-text"><b>Yelp</b></h3>
-        <p>As someone who is trying to expand their food palate and try more new restaurants in a city known for having the greatest food in the country, I enjoy using Yelp as I like to eat with my eyes first before I spend any money.</p>
-        <br>
+        <h3 class="minoel-text">Yelp</h3>
+        <p>As someone trying to expand their food palate and explore a city known for incredible food, Yelp is my go-to. I like to eat with my eyes first before spending any money.</p>
       </div>
 
-    </div>
+    </main>
   </div>
 
-  <!-- Fixed corner gif (large screens) -->
-  <a href="../index.html" class="corner-gif">
-    <img src="img/animated2.gif" alt="Back to home">
-  </a>
-  
   <!-- Music toggle button -->
-   <button class="music-toggle" id="musicToggle">🎵 Sound Off</button>
-   
-   <!-- Hidden audio (no controls) -->
-	<audio id="audioPlayer" loop>
-	<source src="audio/Worrywort.mp3" type="audio/mpeg">
-	</audio>
+  <button class="music-toggle" id="musicToggle">🎵 Sound Off</button>
+
+  <!-- Background audio (hidden, no controls) -->
+  <audio id="audioPlayer" loop>
+    <source src="audio/Worrywort.mp3" type="audio/mpeg">
+  </audio>
 
   <script>
-  const toggle = document.getElementById('musicToggle');
-  const audio = document.getElementById('audioPlayer');
+    // ── Music toggle ──────────────────────────────────────────────
+    const toggle = document.getElementById('musicToggle');
+    const audio  = document.getElementById('audioPlayer');
 
-  toggle.addEventListener('click', () => {
-    if (audio.paused) {
-      audio.play();
-      toggle.textContent = '🎵 Sound On';
-      toggle.classList.add('active');
-    } else {
-      audio.pause();
-      toggle.textContent = '🎵 Sound Off';
-      toggle.classList.remove('active');
-    }
-  });
-</script>
+    toggle.addEventListener('click', () => {
+      if (audio.paused) {
+        audio.play();
+        toggle.textContent = '🎵 Sound On';
+        toggle.classList.add('active');
+      } else {
+        audio.pause();
+        toggle.textContent = '🎵 Sound Off';
+        toggle.classList.remove('active');
+      }
+    });
 
+    // ── Scroll-triggered doodles ──────────────────────────────────
+    const doodles = document.querySelectorAll('.doodle-float');
+    const doodleObserver = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.3 });
+
+    doodles.forEach(d => doodleObserver.observe(d));
+  </script>
 </body>
 </html>
