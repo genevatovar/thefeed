@@ -113,6 +113,7 @@ nav a:hover {
   flex-direction: column;
   align-items: center;
   width: 100%;
+  border-radius: 10px;
 }
 
 .bio-box p {
