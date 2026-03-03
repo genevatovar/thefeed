@@ -4,8 +4,9 @@
 
 :root {
   --black:      #1a1a1a;
-  --red:        #F24957;
-  --red-alt:    #de4a4a;
+  /* --red:        #F24957; */
+  --red:        #c43c47;
+  --darkred:        #A20303;
   --blue:       #5865a8;
   --bg:         #F4F3F0;
   --white:      #ffffff;
@@ -66,10 +67,31 @@ body {
 }
 
 .left-side {
-  flex:       0 0 400px;
-  position:   sticky;
-  top:        10px;
-  box-sizing: border-box;
+  flex:           0 0 400px;
+  position:       sticky;
+  top:            10px;
+  max-height:     calc(100vh - 20px);
+  overflow-y:     scroll;
+  box-sizing:     border-box;
+  padding-bottom: 80px;
+  scrollbar-width: none; /* Firefox */
+}
+
+.left-side::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+/* Fade hint so users know there's more to scroll */
+.left-side::after {
+  content:        '';
+  position:       sticky;
+  bottom:         0;
+  left:           0;
+  display:        block;
+  width:          100%;
+  height:         60px;
+  background:     linear-gradient(to bottom, transparent, var(--bg));
+  pointer-events: none;
 }
 
 .right-side {
@@ -78,7 +100,7 @@ body {
   flex-direction: column;
   align-items:    center;
   min-width:      0;
-  padding:        0 400px 20px 100px;
+  padding:        0 400px 80px 100px; /* 80px bottom clears the music toggle */
 }
 
 
@@ -123,7 +145,7 @@ body {
 }
 
 .name {
-  color:     var(--red-alt);
+  color:     var(--darkred);
   font-size: 2em;
 }
 
@@ -135,7 +157,7 @@ body {
 
 .bio-box p {
   font-family: var(--font-body);
-  font-size:   13px;
+  font-size:   14px;
   margin-top:  10px;
 }
 
@@ -220,9 +242,9 @@ body {
 
 .doodle-float {
   position:       absolute;
-  right:          -350px;
+  right:          -400px;
   top:            50%;
-  width:          280px;
+  width:          350px;
   height:         auto;
   opacity:        0;
   pointer-events: none;
@@ -294,16 +316,18 @@ body {
     flex-direction: column;
   }
 
-  .left-side {
-    flex:     none;
-    width:    100%;
-    max-width: 600px;
-    position: static;
-    margin-bottom: 20px;
+  .right-side {
+    padding: 0 0 100px; /* extra bottom room for music toggle on mobile */
   }
 
-  .right-side {
-    padding: 0 0 200px;
+  .left-side {
+    flex:          none;
+    width:         100%;
+    max-width:     600px;
+    position:      static;
+    max-height:    none;
+    overflow-y:    visible;
+    margin-bottom: 20px;
   }
 
   .corner-gif img {
@@ -316,4 +340,12 @@ body {
   .doodle-float {
     display: none;
   }
+}
+
+.clock-doodle {
+  pointer-events: auto;
+}
+
+.music-doodle {
+  pointer-events: auto;
 }

@@ -1,159 +1,192 @@
-:root {
-  --black: #1a1a1a;
-  --red: #F24957;
-  --darkred: #a20303;
-  --blue: #5865ab;
+/* ============================================================
+   VARIABLES
+   ============================================================ */
 
+:root {
+  --black:      #1a1a1a;
+  --red:        #c43c47;
+  /* --red:        #F24957; */
+  --darkred:    #a20303;
+  --blue:       #5865ab;
+  --bg:         #F4F3F0;
+  --white:      #ffffff;
+  --font-body:  "Pangolin", cursive;
+  --font-brand: "Minoel", cursive;
+  --border:     2.5px solid var(--black);
+  --shadow:     3px 3px 0 var(--black);
+  --shadow-lg:  6px 6px 0 var(--black);
 }
-/* ----------------------------------------
-  CUSTOM FONT
-------------------------------------------- */
+
+
+/* ============================================================
+   CUSTOM FONT
+   ============================================================ */
 
 @font-face {
-  font-family: 'Minoel';
-  src: url('../fonts/Minoel.otf') format('opentype'),
-       url('../fonts/Minoel.ttf') format('truetype');
+  font-family: "Minoel";
+  src: url("../fonts/Minoel.otf") format("opentype"),
+       url("../fonts/Minoel.ttf") format("truetype");
   font-weight: normal;
-  font-style: normal;
+  font-style:  normal;
 }
 
 .minoel-text {
-  font-family: 'Minoel', cursive;
-  font-weight: normal;
-  line-height: 1.3;
-  -webkit-font-smoothing: antialiased;
+  font-family:             var(--font-brand);
+  font-weight:             normal;
+  line-height:             1.3;
+  -webkit-font-smoothing:  antialiased;
   -moz-osx-font-smoothing: grayscale;
-  text-rendering: optimizeLegibility;
+  text-rendering:          optimizeLegibility;
 }
 
-/* ----------------------------------------
-  BASE
-------------------------------------------- */
+
+/* ============================================================
+   BASE
+   ============================================================ */
 
 body {
-  position: relative;
-  background-color: #F4F3F0;
+  background-color: var(--bg);
 }
 
-/* ADD LATER IF I WANT TO ADD CUSTOM cursor */
-/* * {
-  cursor: url('../feed/img/denim-heart2.png'), auto;
-} */
 
-
-/* ----------------------------------------
-  HEADER
-------------------------------------------- */
+/* ============================================================
+   HEADER
+   ============================================================ */
 
 h1 {
-  font-size: clamp(40px, 7vw, 100px); /* FIX 3: scales with screen size */
+  font-size:   clamp(40px, 7vw, 100px);
   line-height: 1;
-  text-align: center;
-  margin: 0;
-  margin-top: 50px;
-  padding: 0;
-  background: linear-gradient(90deg, #363135 40%, #a07080 50%, #363135 60%);
-  background-size: 200% auto;
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  animation: slideUp 0.6s ease-out both;
+  text-align:  center;
+  margin:      50px 0 0;
+  padding:     0;
+  background:  linear-gradient(90deg, #363135 40%, #a07080 50%, #363135 60%);
+  background-size:          200% auto;
+  -webkit-background-clip:  text;
+  -webkit-text-fill-color:  transparent;
+  background-clip:          text;
+  animation:   slideUp 0.6s ease-out both;
 }
 
-/* ----------------------------------------
-  LAYOUT
-------------------------------------------- */
+
+/* ============================================================
+   LAYOUT
+   ============================================================ */
 
 .content-row {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
+  display:         flex;
+  align-items:     center;
   justify-content: center;
-  gap: 40px;
-  width: 100%;
+  gap:             40px;
+  width:           100%;
 }
 
-/* ----------------------------------------
-  GIF
-------------------------------------------- */
+
+/* ============================================================
+   GIF
+   ============================================================ */
 
 .gif {
-  display: flex;
+  display:         flex;
   justify-content: center;
-  align-items: center;
-  animation: fadeIn 0.6s ease-in 0.2s both;
+  align-items:     center;
+  animation:       fadeIn 0.6s ease-in 0.2s both;
 }
 
 .gif img {
-  width: clamp(200px, 40vw, 800px);
-  height: auto; /* lets the image scale naturally without distortion */
+  width:  clamp(200px, 40vw, 800px);
+  height: auto;
   animation: float 3s ease-in-out infinite;
 }
 
-/* ----------------------------------------
-  SECTION
-------------------------------------------- */
+
+/* ============================================================
+   SECTION (intro copy)
+   ============================================================ */
 
 section {
-  display: flex;
+  display:        flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 12px;
-  animation: slideUp 0.6s ease-out 0.3s both;
+  align-items:    flex-start;
+  gap:            12px;
+  animation:      slideUp 0.6s ease-out 0.3s both;
 }
 
 section h2 {
-  font-size: clamp(36px, 5vw, 75px); /* FIX 3: scales with screen size */
-  color: var(--red);
-  margin: 0;
+  font-size: clamp(36px, 5vw, 75px);
+  color:     var(--red);
+  margin:    0;
 }
-
-/* FIX 1: removed section h2::after and h2:hover::after entirely */
 
 section p {
-  font-family: "Pangolin", cursive;
-  font-size: clamp(14px, 1.8vw, 24px); /* FIX 3: scales with screen size */
-  margin: 0;
+  font-family: var(--font-body);
+  font-size:   clamp(14px, 1.8vw, 24px);
+  margin:      0;
 }
 
-/* ----------------------------------------
-  FEED BUTTON
-------------------------------------------- */
 
-/* FIX 2: split into two classes so pulse never gets interrupted */
+/* ============================================================
+   FEED BUTTON
+   ============================================================ */
+
 .feed-btn {
-  display: inline-block;
-  padding: 12px 28px;
-  background: var(--red);
-  color: white;
-  font-family: "Pangolin", cursive;
+  display:         inline-block;
+  padding:         12px 28px;
+  background:      var(--red);
+  color:           var(--white);
+  font-family:     var(--font-body);
   text-decoration: none;
-  border-radius: 100px;
-  border: 2.5px solid var(--black);
-  box-shadow: 3px 3px 0 var(--black);
-  animation: slideUp 0.6s ease-out 0.5s both, pulse 2s ease-in-out 1.1s infinite;
+  border-radius:   100px;
+  border:          var(--border);
+  box-shadow:      var(--shadow);
+  animation:       slideUp 0.6s ease-out 0.5s both,
+                   pulse 2s ease-in-out 1.1s infinite;
 }
 
 .feed-btn:hover {
   transform: translateY(-2px);
 }
 
-/* ----------------------------------------
-  RESPONSIVE
-------------------------------------------- */
+
+/* ============================================================
+   ANIMATIONS
+   ============================================================ */
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-12px); }
+}
+
+@keyframes pulse {
+  0%, 100% { box-shadow: var(--shadow); }
+  50%       { box-shadow: var(--shadow-lg); }
+}
+
+
+/* ============================================================
+   RESPONSIVE — mobile (≤ 768px)
+   ============================================================ */
 
 @media (max-width: 768px) {
   body {
-    display: flex;
+    display:        flex;
     flex-direction: column;
-    align-items: center;
-    padding: 20px;
-    overflow: auto;
+    align-items:    center;
+    padding:        20px;
   }
 
   .content-row {
     flex-direction: column;
-    align-items: center;
+    align-items:    center;
   }
 
   .gif img {
@@ -162,30 +195,6 @@ section p {
 
   section {
     align-items: center;
-    text-align: center;
+    text-align:  center;
   }
-}
-
-/* ----------------------------------------
-  ANIMATIONS
-------------------------------------------- */
-
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to { opacity: 1; }
-}
-
-@keyframes slideUp {
-  from { opacity: 0; transform: translateY(30px); }
-  to { opacity: 1; transform: translateY(0); }
-}
-
-@keyframes float {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-12px); }
-}
-
-@keyframes pulse {
-  0%, 100% { box-shadow: 3px 3px 0 var(--black); }
-  50% { box-shadow: 6px 6px 0 var(--black); }
 }
